@@ -41,6 +41,7 @@ export const Card: FC<CardProps> = memo(function Card({
       end: (item, monitor) => {
         const { id: droppedId, originalIndex } = item
         const didDrop = monitor.didDrop()
+        console.log(didDrop)
         if (!didDrop) {
           moveCard(droppedId, originalIndex)
         }
